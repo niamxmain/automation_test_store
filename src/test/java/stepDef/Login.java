@@ -26,12 +26,12 @@ public class Login extends Env {
 
     @When("user input username")
     public void userInputUsername() {
-        driver.findElement(objLogin.getUsername()).sendKeys("asepudy");
+        driver.findElement(objLogin.getUsername()).sendKeys(username);
     }
 
     @And("user input password")
     public void userInputPassword() {
-        driver.findElement(objLogin.getPassword()).sendKeys("asepudy316");
+        driver.findElement(objLogin.getPassword()).sendKeys(password);
     }
 
     @And("user click button login")
@@ -41,7 +41,7 @@ public class Login extends Env {
 
     @Then("user verified")
     public void userVerified() {
-        String heading1 = driver.findElement(objDashboard.getHeading1()).getText();
+        String heading1 = driver.findElement(objDashboard.getH1()).getText();
         Assert.assertEquals(heading1, "MY ACCOUNT");
     }
 
