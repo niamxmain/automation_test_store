@@ -20,10 +20,10 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 
 public class Product extends Env {
+    //StepDef
+    Login login = new Login();
     //OBJECT
     WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
-    ObjHomepage objHomepage = new ObjHomepage();
-    ObjLogin objLogin = new ObjLogin();
     ObjDashboard objDashboard = new ObjDashboard();
     ObjProduct objProduct = new ObjProduct();
     ObjWishlist objWishlist = new ObjWishlist();
@@ -31,12 +31,11 @@ public class Product extends Env {
     //VARIABLE
     @Given("user login with valid account")
     public void userLoginWithValidAccount() {
-        driver.findElement(objHomepage.getLogin_btn()).click();
-        driver.findElement(objLogin.getUsername()).sendKeys(username);
-        driver.findElement(objLogin.getPassword()).sendKeys(password);
-        driver.findElement(objLogin.getButton()).click();
-        String h1 = driver.findElement(objDashboard.getH1()).getText();
-        Assert.assertEquals(h1, "MY ACCOUNT");
+        login.userAccessLoginPage();
+        login.userInputUsername();
+        login.userInputPassword();
+        login.userClickButtonLogin();
+        login.userVerified();
     }
 
     @When("user select type product")

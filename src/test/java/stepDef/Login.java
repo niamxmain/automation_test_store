@@ -9,6 +9,7 @@ import objPage.ObjDashboard;
 import objPage.ObjHomepage;
 import objPage.ObjLogin;
 import org.junit.Assert;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
@@ -21,6 +22,7 @@ public class Login extends Env {
 
     @Given("user access login page")
     public void userAccessLoginPage() {
+        wait.until(ExpectedConditions.visibilityOfElementLocated(objHomepage.getLogin_btn()));
         driver.findElement(objHomepage.getLogin_btn()).click();
     }
 

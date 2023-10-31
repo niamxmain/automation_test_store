@@ -6,8 +6,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="automationweb" />
+        <module name="percobaan_pertama" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="percobaan_pertama" target="17" />
+    </bytecodeTargetLevel>
   </component>
 </project>
