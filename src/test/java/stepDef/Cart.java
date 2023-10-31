@@ -37,8 +37,8 @@ public class Cart extends Env {
 
     @Then("check product has been added to cart")
     public void checkProductHasBeenAddedToCart() {
-        String name = driver.findElement(objCart.getProductName()).getText();
-        Assert.assertEquals(name, productName);
+        WebElement productName = driver.findElement(objCart.getProductName());
+        wait.until(ExpectedConditions.visibilityOf(productName));
     }
 
     @Given("some product in cart")

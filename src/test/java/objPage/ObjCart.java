@@ -10,6 +10,10 @@ public class ObjCart {
     By trash = By.xpath("//*[@id='cart']/div/div[1]/table/tbody/tr[2]/td[7]/a");
     By msgEmptyCart = By.className("contentpanel");
     By textCart = By.xpath("//span[@class='maintext']");
+    By checkoutBtn = By.xpath("//*[contains(text(), 'Checkout')]");
+    By fieldCoupon = By.id("coupon_coupon");
+    By btnCoupon = By.id("apply_coupon_btn");
+    By errMessageCoupon = By.xpath("//*[@id='maincontainer']/div/div/div/div/strong");
 
     public By getProductName() {
         return productName;
@@ -37,5 +41,21 @@ public class ObjCart {
 
     public By getTextCart() {
         return textCart;
+    }
+
+    public By getCheckoutBtn() {
+        return checkoutBtn;
+    }
+
+    public By getFieldCoupon() {
+        return fieldCoupon;
+    }
+
+    public By getBtnCoupon() {
+        return btnCoupon;
+    }
+
+    public By getErrMessageCoupon() {
+        return errMessageCoupon;
     }
 }
