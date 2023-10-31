@@ -19,6 +19,6 @@ Feature: Product
   @Positive
   Scenario: add product to wishlist
     Given user in detail product page
-    When user click "add to wishlist"
+    When user click add to wishlist
     And user check my wishlist
     Then there is a product in my wishlist

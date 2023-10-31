@@ -6,21 +6,29 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import objPage.ObjDashboard;
+import objPage.ObjWishlist;
 import objPage.ObjHomepage;
 import objPage.ObjLogin;
 import objPage.ObjProduct;
 import org.junit.Assert;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
 public class Product extends Env {
+    //OBJECT
     WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
     ObjHomepage objHomepage = new ObjHomepage();
     ObjLogin objLogin = new ObjLogin();
     ObjDashboard objDashboard = new ObjDashboard();
     ObjProduct objProduct = new ObjProduct();
+    ObjWishlist objWishlist = new ObjWishlist();
+
+    //VARIABLE
     @Given("user login with valid account")
     public void userLoginWithValidAccount() {
         driver.findElement(objHomepage.getLogin_btn()).click();
@@ -38,7 +46,9 @@ public class Product extends Env {
 
     @And("user select a product")
     public void userSelectAProduct() {
-        driver.findElement(objDashboard.getThumbnail()).click();
+        WebElement thumbnail = driver.findElement(objDashboard.getThumbnail());
+        wait.until(ExpectedConditions.visibilityOf(thumbnail));
+        thumbnail.click();
     }
 
     @And("user edit quantity product")
@@ -46,31 +56,45 @@ public class Product extends Env {
         WebElement quantity = driver.findElement(objProduct.getQuantity());
         quantity.clear();
         quantity.sendKeys("2");
-
+        Actions actions = new Actions(driver);
+        actions.sendKeys(quantity, Keys.ENTER);
     }
 
     @Then("total price will be changed")
     public void totalPriceWillBeChanged() {
-
+        wait.until(ExpectedConditions.textToBe(objProduct.getTotalPrice(), "$52.00"));
     }
 
     @Then("display detail product")
     public void displayDetailProduct() {
+        WebElement description = driver.findElement(objProduct.getDescription());
+        assert description.isDisplayed();
     }
 
     @Given("user in detail product page")
     public void userInDetailProductPage() {
+        userSelectTypeProduct();
+        userSelectAProduct();
+        displayDetailProduct();
     }
 
-    @When("user click {string}")
-    public void userClick(String arg0) {
+    @When("user click add to wishlist")
+    public void userClickAddToWishlist() {
+        WebElement wish = driver.findElement(objProduct.getWishlist());
+        wish.click();
     }
 
     @And("user check my wishlist")
     public void userCheckMyWishlist() {
+        WebElement navbar = driver.findElement(objDashboard.getDropdown());
+        Actions actions = new Actions(driver);
+        actions.moveToElement(navbar).perform();
+        driver.findElement(objDashboard.getWishlist()).click();
     }
 
     @Then("there is a product in my wishlist")
     public void thereIsAProductInMyWishlist() {
+        WebElement price = driver.findElement(objWishlist.getPrice());
+        assert price.isDisplayed();
     }
 }

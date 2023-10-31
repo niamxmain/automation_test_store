@@ -7,6 +7,8 @@ public class ObjDashboard {
     By h1 = By.xpath("//span[@class='maintext']");
     By url_apparel = By.xpath("//ul/li/a[@href='https://automationteststore.com/index.php?rt=product/category&path=68']");
     By thumbnail = By.className("thumbnail");
+    By dropdown = By.xpath("//*[@id='customer_menu_top']/li");
+    By wishlist = By.xpath("//ul/li/a[@href='https://automationteststore.com/index.php?rt=account/wishlist']");
 
     public By getName() {
         return name;
@@ -24,4 +26,11 @@ public class ObjDashboard {
         return thumbnail;
     }
 
+    public By getDropdown() {
+        return dropdown;
+    }
+
+    public By getWishlist() {
+        return wishlist;
+    }
 }

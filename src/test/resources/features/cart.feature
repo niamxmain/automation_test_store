@@ -2,7 +2,7 @@ Feature: Cart
 
   @Positive
   Scenario: add product to cart
-    Given user login with valid account
+#    Given user login with valid account
     When user select a product
     And user click icon cart
     And user select color & fill qty
