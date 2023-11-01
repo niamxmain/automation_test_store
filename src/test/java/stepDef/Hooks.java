@@ -10,6 +10,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 public class Hooks extends Env {
     @Before
     public void before(){
+        //DRIVER CHROME
         WebDriverManager.chromedriver().setup();
         ChromeOptions opt = new ChromeOptions();
         driver = new ChromeDriver(opt);

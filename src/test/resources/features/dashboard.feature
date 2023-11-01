@@ -1,8 +1,10 @@
+
 Feature: Dashboard
 
+  Background: login
+    Given user login with valid account
   @Positive
   Scenario: edit account detail in my account menu
-#    Given user login with valid account
     When user click edit account detail
     And user input valid data
     And user click button continue
@@ -10,8 +12,7 @@ Feature: Dashboard
 
   @Negative
   Scenario: edit account with blank firstname
-#    Given user login with valid account
     When user click edit account detail
     And user updates the data by blank the firstname
     And user click button continue
-    Then diplay error message
+    Then display error message

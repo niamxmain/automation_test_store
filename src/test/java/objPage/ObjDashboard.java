@@ -9,7 +9,12 @@ public class ObjDashboard {
     By thumbnail = By.className("thumbnail");
     By dropdown = By.xpath("//*[@id='customer_menu_top']/li");
     By wishlist = By.xpath("//ul/li/a[@href='https://automationteststore.com/index.php?rt=account/wishlist']");
-
+    By editAccount = By.xpath("//*[@id='maincontainer']/div/div[2]/div[1]/div/ul/li[3]/a");
+    By lastNameInformationAccount = By.id("AccountFrm_lastname");
+    By btnContinue = By.xpath("//*[@id='AccountFrm']/div[2]/div/button");
+    By alertSuccess = By.xpath("//*[@id='maincontainer']/div/div[1]/div/div[1]");
+    By firstNameInformationAccount = By.id("AccountFrm_firstname");
+    By alertErrorMsg = By.xpath("//*[@id='maincontainer']/div/div[1]/div/div[1]");
     public By getName() {
         return name;
     }
@@ -32,5 +37,29 @@ public class ObjDashboard {
 
     public By getWishlist() {
         return wishlist;
+    }
+
+    public By getEditAccount() {
+        return editAccount;
+    }
+
+    public By getLastNameInformationAccount() {
+        return lastNameInformationAccount;
+    }
+
+    public By getBtnContinue() {
+        return btnContinue;
+    }
+
+    public By getAlertSuccess() {
+        return alertSuccess;
+    }
+
+    public By getFirstNameInformationAccount() {
+        return firstNameInformationAccount;
+    }
+
+    public By getAlertErrorMsg() {
+        return alertErrorMsg;
     }
 }

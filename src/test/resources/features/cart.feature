@@ -1,3 +1,4 @@
+@Regression
 Feature: Cart
 
   Background: login valid account

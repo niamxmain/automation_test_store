@@ -1,3 +1,4 @@
+@Regression
 Feature: login
   @Positive
   Scenario: login success
