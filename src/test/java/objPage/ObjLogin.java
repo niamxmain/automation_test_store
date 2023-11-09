@@ -6,7 +6,7 @@ public class ObjLogin {
     By username = By.name("loginname");
     By password = By.name("password");
     By button = By.xpath("//button[@type='submit'][@title='Login']");
-    By errorLogin = By.xpath("//div[@class='alert alert-error alert-danger']");
+    By errorLogin = By.xpath("//*[@id='maincontainer']/div/div/div/div[1]");
 
     public By getUsername() {
         return username;

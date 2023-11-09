@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="179.969" tests="14" skipped="0" failures="0" errors="0">
-<testcase classname="Cart" name="add product to cart" time="15.665">
+<testsuite name="Cucumber" time="217.923" tests="14" skipped="0" failures="0" errors="0">
+<testcase classname="Cart" name="add product to cart" time="18.928">
 <system-out><![CDATA[
 Given user login with valid account.........................................passed
 When user select type product...............................................passed
@@ -9,7 +9,7 @@ And user click add to cart..................................................pass
 Then check product has been added to cart...................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Cart" name="Check the total price of the product via cart" time="14.85">
+<testcase classname="Cart" name="Check the total price of the product via cart" time="17.349">
 <system-out><![CDATA[
 Given some product in cart..................................................passed
 When user click column input qty............................................passed
@@ -17,7 +17,7 @@ And user edit amount of qty.................................................pass
 Then total price in cart will be changed....................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Cart" name="delete product from cart" time="14.475">
+<testcase classname="Cart" name="delete product from cart" time="18.432">
 <system-out><![CDATA[
 Given some product in cart..................................................passed
 When user in cart page......................................................passed
@@ -25,7 +25,7 @@ And user click trash icon in product........................................pass
 Then product will be removed................................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Cart" name="Fill in the qty of products in the cart with the value 0" time="13.064">
+<testcase classname="Cart" name="Fill in the qty of products in the cart with the value 0" time="17.597">
 <system-out><![CDATA[
 Given some product in cart..................................................passed
 When user click column input qty............................................passed
@@ -33,14 +33,14 @@ And user input value 0 and enter............................................pass
 Then display error message qty..............................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Cart" name="add products to cart without logging in" time="9.401">
+<testcase classname="Cart" name="add products to cart without logging in" time="12.431">
 <system-out><![CDATA[
 Given user select a product.................................................passed
 When user click add to cart without log in..................................passed
 Then redirect to login page.................................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Checkout" name="checkout product in cart" time="13.786">
+<testcase classname="Checkout" name="checkout product in cart" time="17.077">
 <system-out><![CDATA[
 Given user in cart page with some product...................................passed
 When user click checkout button.............................................passed
@@ -49,7 +49,7 @@ And user click button confirm order.........................................pass
 Then display success purchase...............................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Checkout" name="apply invalid coupon" time="16.451">
+<testcase classname="Checkout" name="apply invalid coupon" time="20.052">
 <system-out><![CDATA[
 Given user in cart page with some product...................................passed
 When user input invalid coupon..............................................passed
@@ -57,7 +57,7 @@ And user click button apply coupon..........................................pass
 Then display error message coupon...........................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Dashboard" name="edit account detail in my account menu" time="10.733">
+<testcase classname="Dashboard" name="edit account detail in my account menu" time="13.458">
 <system-out><![CDATA[
 Given user login with valid account.........................................passed
 When user click edit account detail.........................................passed
@@ -66,7 +66,7 @@ And user click button continue..............................................pass
 Then display popup success..................................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Dashboard" name="edit account with blank firstname" time="10.979">
+<testcase classname="Dashboard" name="edit account with blank firstname" time="14.04">
 <system-out><![CDATA[
 Given user login with valid account.........................................passed
 When user click edit account detail.........................................passed
@@ -75,7 +75,7 @@ And user click button continue..............................................pass
 Then display error message..................................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="login" name="login success" time="10.49">
+<testcase classname="login" name="login success" time="11.145">
 <system-out><![CDATA[
 Given user access login page................................................passed
 When user input username....................................................passed
@@ -84,7 +84,7 @@ And user click button login.................................................pass
 Then user verified..........................................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="login" name="login invalid" time="7.833">
+<testcase classname="login" name="login invalid" time="12.245">
 <system-out><![CDATA[
 Given user access login page................................................passed
 When user input invalid username............................................passed
@@ -93,7 +93,7 @@ And user click button login.................................................pass
 Then verified error login...................................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Product" name="Check the total price of the product via detail product" time="14.363">
+<testcase classname="Product" name="Check the total price of the product via detail product" time="14.477">
 <system-out><![CDATA[
 Given user login with valid account.........................................passed
 When user select type product...............................................passed
@@ -102,7 +102,7 @@ And user edit quantity product..............................................pass
 Then total price will be changed............................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Product" name="check detail product" time="11.733">
+<testcase classname="Product" name="check detail product" time="13.461">
 <system-out><![CDATA[
 Given user login with valid account.........................................passed
 When user select type product...............................................passed
@@ -110,7 +110,7 @@ And user select a product...................................................pass
 Then display detail product.................................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Product" name="add product to wishlist" time="15.303">
+<testcase classname="Product" name="add product to wishlist" time="16.487">
 <system-out><![CDATA[
 Given user login with valid account.........................................passed
 Given user in detail product page...........................................passed
