@@ -15,14 +15,14 @@ public class Hooks extends Env {
     @Before
     public void before(){
         //DRIVER CHROME
-        WebDriverManager.chromedriver().setup();
-        ChromeOptions opt = new ChromeOptions();
-        driver = new ChromeDriver(opt);
+//        WebDriverManager.chromedriver().setup();
+//        ChromeOptions opt = new ChromeOptions();
+//        driver = new ChromeDriver(opt);
 
         //DRIVER FIREFOX
-//        WebDriverManager.firefoxdriver().setup();
-//        FirefoxOptions opt = new FirefoxOptions();
-//        driver = new FirefoxDriver(opt);
+        WebDriverManager.firefoxdriver().setup();
+        FirefoxOptions opt = new FirefoxOptions();
+        driver = new FirefoxDriver(opt);
         //Driver edge
 //        WebDriverManager.edgedriver().setup();
 //        EdgeOptions opt = new EdgeOptions();

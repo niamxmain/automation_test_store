@@ -7,7 +7,7 @@ public class ObjCart {
     By fieldQuantity = By.xpath("//*[@id='cart_quantity11621744a646c83c69d17e35569a5a3267f']");
     By unitPrice = By.xpath("//td[@class='align_right']");
     By total = By.xpath("//*[@id='cart']/div/div[1]/table/tbody/tr[2]/td[6]");
-    By trash = By.xpath("//*[@id='cart']/div/div[1]/table/tbody/tr[2]/td[7]/a");
+    By trash = By.xpath("//*[@id=\"cart\"]/div/div[1]/table/tbody/tr[2]/td[7]/a");
     By msgEmptyCart = By.className("contentpanel");
     By textCart = By.xpath("//span[@class='maintext']");
     By checkoutBtn = By.xpath("//*[contains(text(), 'Checkout')]");

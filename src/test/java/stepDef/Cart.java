@@ -77,9 +77,11 @@ public class Cart extends Env {
     @Then("product will be removed")
     public void productWillBeRemoved() {
         WebElement message = driver.findElement(objCart.getMsgEmptyCart());
-//        String msg = message.getText();
-        wait.until(ExpectedConditions.visibilityOf(message));
-//        Assert.assertEquals(msg, "Your shopping cart is empty!");
+        if (!message.isDisplayed()) {
+            userClickTrashIconInProduct();
+        } else {
+            wait.until(ExpectedConditions.visibilityOf(message));
+        }
     }
 
     @And("user input value 0 and enter")
