@@ -9,6 +9,7 @@ public class ObjCart {
     By total = By.xpath("//*[@id='cart']/div/div[1]/table/tbody/tr[2]/td[6]");
     By trash = By.xpath("//*[@id=\"cart\"]/div/div[1]/table/tbody/tr[2]/td[7]/a");
     By msgEmptyCart = By.className("contentpanel");
+    By errMsgQty = By.className("messageQty");
     By textCart = By.xpath("//span[@class='maintext']");
     By checkoutBtn = By.xpath("//*[contains(text(), 'Checkout')]");
     By fieldCoupon = By.id("coupon_coupon");
@@ -57,5 +58,9 @@ public class ObjCart {
 
     public By getErrMessageCoupon() {
         return errMessageCoupon;
+    }
+
+    public By getErrMsgQty() {
+        return errMsgQty;
     }
 }

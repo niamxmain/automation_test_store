@@ -1,4 +1,4 @@
-
+@dashboard
 Feature: Dashboard
 
   Background: login

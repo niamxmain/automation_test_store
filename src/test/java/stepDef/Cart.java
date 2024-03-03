@@ -6,6 +6,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import objPage.ObjCart;
+import objPage.ObjLogin;
 import objPage.ObjProduct;
 import org.junit.Assert;
 import org.openqa.selenium.Keys;
@@ -23,6 +24,7 @@ public class Cart extends Env {
     WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
     ObjProduct objProduct = new ObjProduct();
     ObjCart objCart = new ObjCart();
+    ObjLogin objLogin = new ObjLogin();
 
     //Variable
     static String productName;
@@ -94,16 +96,16 @@ public class Cart extends Env {
     }
 
 
-    @Then("display error message qty")//fungsi ini saya buat positif agar tidak error
+    @Then("display error message qty")
     public void displayErrorMessageQty() {
-        WebElement message = driver.findElement(objCart.getMsgEmptyCart());
+        WebElement message = driver.findElement(objCart.getErrMsgQty());
         wait.until(ExpectedConditions.visibilityOf(message));
     }
 
-    @Then("redirect to login page")//fungsi ini saya buat positif agar tidak error
+    @Then("redirect to login page")
     public void redirectToLoginPage() {
-        String text = driver.findElement(objCart.getTextCart()).getText();
-        Assert.assertEquals(text, "SHOPPING CART");
+        String text = driver.findElement(objLogin.getSpanMainText()).getText();
+        Assert.assertEquals(text, "ACCOUNT LOGIN");
     }
 
     @Then("total price in cart will be changed")

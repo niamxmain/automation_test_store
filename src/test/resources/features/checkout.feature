@@ -1,4 +1,4 @@
-@Regression
+@checkout
 Feature: Checkout
 
   Background: cart product

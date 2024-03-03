@@ -1,4 +1,4 @@
-@Regression
+@product
 Feature: Product
 
   Background: user login with valid account

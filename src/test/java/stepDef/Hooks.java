@@ -4,6 +4,7 @@ import config.Env;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.junit.jupiter.api.AfterAll;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -15,14 +16,14 @@ public class Hooks extends Env {
     @Before
     public void before(){
         //DRIVER CHROME
-//        WebDriverManager.chromedriver().setup();
-//        ChromeOptions opt = new ChromeOptions();
-//        driver = new ChromeDriver(opt);
+        WebDriverManager.chromedriver().setup();
+        ChromeOptions opt = new ChromeOptions();
+        driver = new ChromeDriver(opt);
 
         //DRIVER FIREFOX
-        WebDriverManager.firefoxdriver().setup();
-        FirefoxOptions opt = new FirefoxOptions();
-        driver = new FirefoxDriver(opt);
+//        WebDriverManager.firefoxdriver().setup();
+//        FirefoxOptions opt = new FirefoxOptions();
+//        driver = new FirefoxDriver(opt);
         //Driver edge
 //        WebDriverManager.edgedriver().setup();
 //        EdgeOptions opt = new EdgeOptions();
@@ -35,4 +36,8 @@ public class Hooks extends Env {
     public void after() {
         driver.quit();
     }
+//    @AfterAll
+//    public void afterAll() {
+//
+//    }
 }
