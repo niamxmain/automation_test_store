@@ -38,7 +38,3 @@ Feature: Cart
     When user click add to cart without log in
     Then redirect to login page
 
-  @Positive
-  Scenario: delete all product on cart
-    Given  some product in cart
-
