@@ -21,9 +21,9 @@ Untuk melihat daftar lengkap test scenario dan test case, Anda dapat mengunjungi
     - Buka projek yang sudah diclone menggunakan IDE favorit kalian
     - Update dependencies di file pom.xml untuk menghindari error
     - Terakhir jalankan pengujian melalui file yang terletak di direktori "/run/Run"
-    - Hasil pengujian / report akan tergenerate di folder /target  
+    - Hasil pengujian / report akan tergenerate di folder /target
+    - ![hasil pengujiani](https://github.com/niamxmain/automation_test_store/blob/main/src/test/resources/screenshot/selenium.png)
 ## Catatan Tambahan
   - Pengujian ini saat ini hanya dapat dijalankan secara lokal.
   - Proyek ini akan terus dikembangkan secara berkala.
   - Semoga proyek ini bermanfaat bagi teman-teman sekalian.
-![hasil pengujiani](https://drive.google.com/file/d/1xS1XgsLE8O0h9dSg13ax_hU58NS9kHOj)
